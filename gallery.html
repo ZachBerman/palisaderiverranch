@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Palisade River Ranch</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/animate.css" />
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="css/blueimp-gallery.min.css">
+  <script src="javascript/pace.min.js"></script>
+</head>
+
+<body class="home-page">
+  <header>
+    <div class="container hidden-xs logo">
+      <a href="index.html"><img class="img-responsive center-block" src="images/logos/header-logo.jpg" alt="Logo" />
+      </a>
+    </div>
+    <div class="navbar-wrapper">
+      <div class="container">
+        <nav class="navbar navbar-static-top">
+          <div class="navbar-header">
+            <a class="navbar-brand visible-xs" href="index.html"><img class="img-responsive" src="images/logos/logo-xs.png" alt="" />
+            </a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-center navbar-nav">
+              <li>
+                <a href="#"><strong>Accomodations</strong></a>
+              </li>
+              <li>
+              <a href="#"><strong>Events</strong></a>
+              </li>
+              <li>
+                <a href="card.html"><strong>Coming Soon</strong></a>
+              </li>
+              <li>
+                <a href="gallery.html"><strong>Photo Gallery</strong></a>
+              </li>
+              <li>
+                <a href="contact.html"><strong>Contact Us</strong></a>
+              </li>
+
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+<div class="row">
+  <h2 class="text-center page-heading">Photo Gallery</h2>
+</div>
+
+<section>
+  <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+    <div class="slides"></div>
+    <!-- <h3 class="title"></h3> -->
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+  </div>
+
+  <div id="links">
+    <div class="row">
+      <div class="col-sm-offset-2 col-sm-2 col-xs-4">
+        <a href="images/deck.png" class="img-responsive" title="Deck by Colorado river">
+          <img src="images/deck.png" class="img-responsive" alt="Deck by Colorado river">
+        </a>
+      </div>
+      <div class="col-sm-2 col-xs-4">
+        <a href="images/pondsunset.jpg" class="img-responsive" title="Pond at sunset ">
+          <img src="images/pondsunset.jpg" class="img-responsive" alt="Pond at sunset">
+        </a>
+      </div>
+      <div class="col-sm-2 col-xs-4">
+        <a href="images/pond.jpg" class="img-responsive" title="Pond">
+          <img src="images/pond.jpg" class="img-responsive" alt="Pond">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="row-xs-12">
+        <div class="divider"></div>
+          <div class="text-center col-offset-0">
+            <a href="index.html"><img src="images/logos/footer-logo.jpg" alt="" class="logo center-block hidden-xs">
+            </a>
+            <a href="index.html"><img class="img-responsive logo center-block visible-xs"src="images/logos/footer-logo.jpg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-9">
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a>
+            </li>
+            </li>
+            <li><a href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-3">
+          <p>© Palisade River Ranch 2016</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js"></script>
+  <script src="javascript/animate-on-scroll.js"></script>
+  <script src="javascript/script.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="javascript/blueimp-gallery.min.js"></script>
+  <script>
+    document.getElementById('links').onclick = function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+            link = target.src ? target.parentNode : target,
+            options = {index: link, event: event},
+            links = this.getElementsByTagName('a');
+        blueimp.Gallery(links, options);
+    };
+</script>
+
+</body>
+
+</html>
