@@ -234,11 +234,13 @@ blockquote footer {
   white-space: normal;
 }
 @media (min-width: 767px) {
-  #navbar a:hover {
-    background: #ffffff; /*navbar link background color on hover*/
-    color: black;
+  #navbar a:hover,
+  #navbar a.active {
+    background: #ffffff;
+    color: #af2045;
   }
-  #navbar a:hover:after {
+  #navbar a:hover:after,
+  #navbar a.active:after {
     width: 100%;
   }
   #navbar a:after {
