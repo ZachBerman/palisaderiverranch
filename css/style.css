@@ -2,43 +2,35 @@
   font-family: 'Helvetica', Arial, sans-serif;
   color: black;
 }
-
 .home-about {
   font-size: 20px;
+  padding-top: 15px;
 }
 .about-the-ranch {
   font-size: 30px;
 }
-/*page border */
-html {
-    min-height: 100%;
-    border: 15px solid #ffde90;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-}
 
-/*remove border on xs viewports*/
 @media (max-width: 767px) {
   html {
     border: none;
   }
-
   .home-about {
   padding-left: 10px;
   padding-right: 10px;
+  font-size: 20px;
   }
-
   #photo-gallery {
     padding-left: 10px;
     padding-right: 10px;
   }
-
   .gallery-heading {
     padding-top: 15px;
   }
+  .events-p{
+    text-align: left;
+  }
   .home-about {
-    font-size: 16px;
+    text-align:left;
   }
 }
 
@@ -67,7 +59,6 @@ body {
   color: #333333;
   font-size: 16px;
   font-family: 'Lato', Arial, sans-serif;
-  background-color: #feeebf;
 }
 header {
   margin-top: 30px;
@@ -195,7 +186,7 @@ blockquote footer {
 }
 #navbar .navbar-center:after,
 #navbar .navbar-center:before {
-  border-top: 2px solid #b6aa92;
+  border-top: 2px solid #d0c4ac;
   content: "";
   margin: 0 auto;
   position: absolute;
@@ -229,9 +220,9 @@ blockquote footer {
   font-size: 14px;
   letter-spacing: 1px;
   color: #333333;
-  padding: 15px 30px;
+  padding: 14px 24px;   /*padding for navbar elements*/
   transition: all 0.3s ease-in-out;
-  background: #feeebf;      /*navbar background*/
+  background: #ffffff;      /*navbar background*/
   line-height: 1.4;
 }
 
@@ -244,7 +235,7 @@ blockquote footer {
 }
 @media (min-width: 767px) {
   #navbar a:hover {
-    background: #feeebf; /*navbar link background color on hover*/
+    background: #ffffff; /*navbar link background color on hover*/
     color: black;
   }
   #navbar a:hover:after {
@@ -284,6 +275,10 @@ blockquote footer {
   #navbar .dropdown-submenu:hover > .dropdown-menu {
     display: block;
   }
+  div.navbar-wrapper {
+    margin-bottom: -35px;
+    margin-top: -25px;
+  }
 }
 .navbar-brand {
   padding: 0 15px;
@@ -312,7 +307,7 @@ blockquote footer {
 }
 .divider:after,
 .divider:before {
-  border-top: 2px solid #b6aa92;
+  border-top: 2px solid #d0c4ac;
   content: "";
   margin: 0 auto;
   position: absolute;
@@ -365,14 +360,14 @@ section {
   line-height: 50px;
   color: #ffffff;
   border-radius: 50%;
-  background-color: #333333;
+  background-color: #d0c4ac;
   font-size: 22px;
   transition: all 0.3s linear;
   margin: 0 2px;
 }
 .social-icon:hover,
 .social-icon-small:hover {
-  background: #af2045;
+  background: gray;
 }
 .social-icon-small {
   width: 35px;
@@ -404,10 +399,10 @@ section {
 }
 
 .swiper-container {
-        width: 85%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
-        height: 650px;
+        height: 100%;
     }
 
 .swiper-slide {
@@ -439,6 +434,10 @@ section {
   }
   .swiper-slide {
     height: 100%;
+  }
+
+  div#map {
+    height: 250px;
   }
 }
 
@@ -579,7 +578,7 @@ fieldset[disabled] .btn-custom.focus {
 }
 .btn-default:hover {
   color: #ffffff;
-  background-color: #9d9da6;
+  background-color: gray;
 }
 .btn-default:active,
 .btn-default.active,
@@ -625,7 +624,7 @@ fieldset[disabled] .btn-default.focus {
 }
 .btn-primary:hover {
   color: #ffffff;
-  background-color: #1a1a1a;
+  background-color: gray;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -963,7 +962,7 @@ fieldset[disabled] .btn-link.focus {
   display: block;
   content: "";
   height: 3px;
-  background-color: #af2045;
+  background-color: gray;
   width: 0;
   transition: all 0.3s ease-in-out;
   margin: 0 auto;
@@ -1005,17 +1004,14 @@ option {
   margin-top: 10px;
 }
 
-.about-heading {
-  margin-top: -20px;
-  padding-bottom: 5px;
-}
-
 .carousel-control.left, .carousel-control.right {
     background-image: none
 }
 
 .accoms-general {
-  text-align: left;
+  text-align: justify;
+  padding-top: 35px;
+  font-size: 20px;
 }
 
 .index-slider {
@@ -1028,9 +1024,15 @@ option {
 
 .accoms-p {
   padding-top: 15px;
+  font-size: 20px;
+  text-align: justify;
 }
 
 .glyphicon-home:before {
+  color: white;
+}
+
+.glyphicon-send:before {
   color: white;
 }
 
@@ -1280,4 +1282,70 @@ figcaption p {
 
 .thumb-links {
   margin-bottom: 80px;
+}
+
+p.area-p {
+  font-size: 20px;
+  text-align: justify;
+}
+
+.about-header {
+  color: #d0c4ac;
+  font-weight: 700;
+  margin-top: -5px;
+}
+
+.logo-text {
+  margin-top: 5px;
+}
+
+#events-content {
+  font-size: 20px;
+  margin-top: -12px;
+}
+
+.photo-gallery {
+  margin-top: -20px;
+}
+
+.events-contact {
+  font-size: 20px;
+}
+
+.index-contact {
+  font-size: 18px;
+}
+
+#contact-map {
+  margin-top: 15px;
+}
+
+.accoms-header {
+  color: #d0c4ac;
+  font-weight: 700;
+}
+
+.image-row-1 {
+  margin-top: 15px;
+}
+
+.events-opener {
+  border-radius: 3px;
+}
+
+.events-button {
+  background-color: #d0c4ac;
+}
+
+.radius {
+  border-radius: 3px;
+}
+
+.submit {
+  background-color: #d0c4ac;
+}
+
+.wpframe {
+    padding: 10px;
+    border: solid 1px #EFEFEF;
 }
