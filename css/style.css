@@ -18,19 +18,16 @@
   padding-left: 10px;
   padding-right: 10px;
   font-size: 20px;
-  }
-  #photo-gallery {
-    padding-left: 10px;
-    padding-right: 10px;
+  text-align: justify;
   }
   .gallery-heading {
     padding-top: 15px;
   }
   .events-p{
-    text-align: left;
+    text-align: justify;
   }
   .home-about {
-    text-align:left;
+    /*text-align:left;*/
   }
 }
 
@@ -1338,16 +1335,20 @@ p.area-p {
 .events-button {
   background-color: #d0c4ac;
 }
-
 .radius {
   border-radius: 3px;
 }
-
 .submit {
   background-color: #d0c4ac;
 }
-
 .wpframe {
     padding: 10px;
     border: solid 1px #EFEFEF;
+}
+.footer-links a{
+  text-decoration: none;
+}
+.xs-titles {
+  color: #d0c4ac;
+  font-weight: 700;
 }
