@@ -1,5 +1,5 @@
 * {
-  font-family: 'Helvetica', Arial, sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   color: black;
 }
 .home-about {
@@ -55,7 +55,6 @@ body {
   background: #ffffff;
   color: #333333;
   font-size: 16px;
-  font-family: 'Lato', Arial, sans-serif;
 }
 header {
   margin-top: 30px;
@@ -155,7 +154,6 @@ blockquote footer {
   margin: 0;
 }
 #navbar {
-  /*font-family: 'Lato', sans-serif;*/
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -290,7 +288,6 @@ blockquote footer {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 80px;
-  /*font-family: "Lato", sans-serif;*/
   padding: 0 15px;
 }
 .content ol > li {
@@ -1060,6 +1057,7 @@ p.area-p {
 }
 .footer-links a{
   text-decoration: none;
+  font-size: 16px;
 }
 .xs-titles {
   color: #d0c4ac;
