@@ -1,15 +1,7 @@
-#font-test-original {
+* {
   font-family: 'Josefin Sans', sans-serif;
   color: black;
 }
-#font-test-new {
-  font-family: 'Lora', serif;
-  color: black;
-}
-/** {
-  font-family: 'Josefin Sans', sans-serif;
-  color: black;
-}*/
 html, body {
   max-width: 100%;
   overflow-x: hidden;
