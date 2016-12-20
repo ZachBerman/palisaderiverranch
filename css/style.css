@@ -1000,7 +1000,7 @@ p.area-p {
 }
 
 .about-header {
-  color: #d0c4ac;
+  color: #000;
   font-weight: 700;
   margin-top: -5px;
 }
@@ -1032,7 +1032,7 @@ p.area-p {
 }
 
 .accoms-header {
-  color: #d0c4ac;
+  color: #000;
   font-weight: 700;
 }
 
@@ -1062,7 +1062,7 @@ p.area-p {
   font-size: 16px;
 }
 .xs-titles {
-  color: #d0c4ac;
+  color: #000;
   font-weight: 700;
 }
 .social a {
