@@ -125,7 +125,7 @@
         </div>
 
 					<div class="col-sm-8">
-            <form name="contact_form" id="contact-form" class="form-horizontal" action="//formspree.io/zberms@gmail.com" method="post">
+            <form name="contact_form" id="contact-form" class="form-horizontal" method="post">
               <div class="form-group">
                 <label class="col-sm-2 control-label">Name</label>
                 <div class="col-sm-10 animated-form-control">
@@ -147,12 +147,12 @@
               	<!-- CONFIG -->
 								<input class="hidden" type="text" name="_gotcha">
 								<input type="hidden" name="_subject" value="Website Form Submission">
-								<input type="hidden" name="_cc" value="email@cc.com">
+								<input type="hidden" name="_next" value="//contact.html">
 								<!-- /CONFIG -->
               <div class="form-group">
                 <br/>
                 <div class="col-sm-12 col-md-12 ">
-                  <input type="submit" value="send" class="submit btn btn-default pull-right"></a>
+                  <input type="submit" value="send" id="send-message" class="submit btn btn-default pull-right"></a>
                   <!-- <input type="hidden" name="_next" value="http://localhost/palisaderiverranch/HTML/thanks.html"> -->
                 </div>
               </div>
@@ -205,6 +205,43 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUtsdmRSX0cYGbbOGXZlMdFA7z4zw7Xok&callback=initMap"
     async defer></script>
 
+  <script>
+var $contactForm = $('#contact-form');
+
+$contactForm.submit(function(e) {
+  e.preventDefault();
+  var $submit = $('input:submit', $contactForm);
+  var defaultSubmitText = $submit.val();
+
+  $.ajax({
+    url: '//formspree.io/zberms@gmail.com',
+    method: 'POST',
+    data: $(this).serialize(),
+    dataType: 'json',
+    beforeSend: function() {
+      //$contactForm.append('<div class="alert alert--loading">Sending message…</div>');
+      $submit.attr('disabled', true).val('Sending message…');
+    },
+    success: function(data) {
+      //$contactForm.append('<div class="alert alert--success">Message sent!</div>');
+      $submit.val('Message sent!');
+      setTimeout(function() {
+        //$('.alert--success').remove();
+        $submit.attr('disabled', false).val(defaultSubmitText);
+      }, 5000);
+    },
+    error: function(err) {
+      //$contactForm.find('.alert--loading').hide();
+      //$contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
+      $submit.val('Ops, there was an error.');
+      setTimeout(function() {
+        //$('.alert--error').remove();
+        $submit.attr('disabled', false).val(defaultSubmitText);
+      }, 20000);
+    }
+  });
+});
+</script>
 </body>
 
 </html>
