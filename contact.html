@@ -125,7 +125,7 @@
         </div>
 
 					<div class="col-sm-8">
-            <form name="contact_form" id="contact-form" class="form-horizontal" action="//formspree.io/palisaderiverranch@gmail.com" method="post">
+            <form name="contact_form" id="contact-form" class="form-horizontal" action="https://www.enformed.io/168hpzdc" method="POST">
               <div class="form-group">
                 <label class="col-sm-2 control-label">Name</label>
                 <div class="col-sm-10 animated-form-control">
@@ -142,18 +142,21 @@
                 <label class="col-sm-2 control-label">Message</label>
                 <div class="col-sm-10 animated-form-control">
                   <textarea name="message" class="textarea form-control" id="message" required="required" rows="5" cols="20"></textarea>
+                  <div class="form-success alert alert-success" role="alert" style="display:none;"></div>
+                  <div class="form-failure alert alert-danger" role="alert" style="display:none;"></div>
                 </div>
               </div>
               	<!-- CONFIG -->
-								<input class="hidden" type="text" name="_gotcha">
-								<input type="hidden" name="_subject" value="Website Form Submission">
-								<input type="hidden" name="_next" value="//contact.html">
+								<input type="hidden" name="*subject" value="Website Form Submission" />
+                <input type="hidden" name="*honeypot" />
+                <input type="hidden" name="*reply" value="email" />
+                <input type="hidden" name="*default_email" value="palisaderiverranch@gmail.com" />
 								<!-- /CONFIG -->
               <div class="form-group">
                 <br/>
                 <div class="col-sm-12 col-md-12 ">
+                <br>
                   <input type="submit" value="send" id="send-message" class="submit btn btn-default pull-right"></a>
-                  <!-- <input type="hidden" name="_next" value="http://localhost/palisaderiverranch/HTML/thanks.html"> -->
                 </div>
               </div>
             </form>
@@ -206,41 +209,27 @@
     async defer></script>
 
   <script>
-var $contactForm = $('#contact-form');
-
-$contactForm.submit(function(e) {
-  e.preventDefault();
-  var $submit = $('input:submit', $contactForm);
-  var defaultSubmitText = $submit.val();
-
-  $.ajax({
-    url: '//formspree.io/palisaderiverranch@gmail.com',
-    method: 'POST',
-    data: $(this).serialize(),
-    dataType: 'json',
-    beforeSend: function() {
-      //$contactForm.append('<div class="alert alert--loading">Sending message…</div>');
-      $submit.attr('disabled', true).val('Sending message…');
-    },
-    success: function(data) {
-      //$contactForm.append('<div class="alert alert--success">Message sent!</div>');
-      $submit.val('Message sent!');
-      setTimeout(function() {
-        //$('.alert--success').remove();
-        $submit.attr('disabled', false).val(defaultSubmitText);
-      }, 5000);
-    },
-    error: function(err) {
-      //$contactForm.find('.alert--loading').hide();
-      //$contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
-      $submit.val('Ops, there was an error.');
-      setTimeout(function() {
-        //$('.alert--error').remove();
-        $submit.attr('disabled', false).val(defaultSubmitText);
-      }, 20000);
-    }
+  $(document).ready(function(){
+    $("#contact-form").submit(function(event){
+      event.preventDefault();
+      $.ajax({
+        url: "https://www.enformed.io/168hpzdc",
+        method: "post",
+        dataType: "json",
+        accepts: "application/json",
+        data: $("#contact-form").serialize(),
+        success: function(){
+          $( ".submit" ).hide();
+          $(".form-success").text("Thanks, we'll get back to you shortly!").fadeIn();
+          // Show a success message here...
+        },
+        error: function(){
+          $(".form-failure").text("Something went wrong, please try again.").fadeIn();
+          // Show an error message here...
+        }
+      });
+    });
   });
-});
 </script>
 </body>
 

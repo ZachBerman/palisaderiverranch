@@ -1068,3 +1068,14 @@ p.area-p {
 .social a {
   text-decoration: none;
 }
+.form-success {
+  margin-top: 30px;
+  background-color: #D0C4AB;
+  border-color: #d6e9c6;
+  color: #000;
+  text-align: center;
+}
+.form-failure {
+  margin-top: 30px;
+  text-align: center;
+}
