@@ -138,6 +138,7 @@
                   <input type="email" name="_replyto" class="form-control" id="email" required="required" />
                 </div>
               </div>
+                  <input type="text" id="phone_field" name="*honeypot" class="form-control" />
               <div class="form-group">
                 <label class="col-sm-2 control-label">Message</label>
                 <div class="col-sm-10 animated-form-control">
@@ -146,15 +147,11 @@
                   <div class="form-failure alert alert-danger" role="alert" style="display:none;"></div>
                 </div>
               </div>
-              <div class=col-12>
-                  <div class=form-group>
-                    <input type="checkbox" name="*honeypot" value="1" style="display:none !important" tabindex="-1" autocomplete="off">
-                  </div>
-                </div>
               	<!-- CONFIG -->
 								<input type="hidden" name="*subject" value="Website Form Submission" />
                 <input type="hidden" name="*reply" value="email" />
-                <input type="hidden" name="*default_email" value="palisaderiverranch@gmail.com" />
+                <input type="hidden" name="*default_email" value="zberms@gmail.com" />
+                <!-- <input type="hidden" name="*cc" value="palisaderiverranch@gmail.com" /> -->
 								<!-- /CONFIG -->
               <div class="form-group">
                 <br/>
@@ -214,6 +211,9 @@
 
   <script>
   $(document).ready(function(){
+
+  $('#phone_field').hide();
+
     $("#contact-form").submit(function(event){
       event.preventDefault();
       $.ajax({

@@ -1079,3 +1079,6 @@ p.area-p {
   margin-top: 30px;
   text-align: center;
 }
+#phone_field {
+  display: none !important;
+}

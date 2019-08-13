@@ -19,6 +19,7 @@
 		        e.preventDefault();
                 e.stopPropagation();
             }
+
 		});
 
             
