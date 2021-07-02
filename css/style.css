@@ -1082,3 +1082,7 @@ p.area-p {
 #phone_field {
   display: none !important;
 }
+.form-success-jumbotron {
+  margin-top: 50px !important;
+  margin-bottom: 0;
+}
