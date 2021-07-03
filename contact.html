@@ -125,7 +125,7 @@
         </div>
 
 					<div class="col-sm-8">
-            <form name="contact_form" id="contact-form" class="form-horizontal" method="POST" data-netlify="true" action="/form-success">
+            <form name="contact_form" id="contact-form" class="form-horizontal" method="POST" data-netlify="true" action="/form-success" netlify-honeypot="bot-field">
               <div class="form-group">
                 <label class="col-sm-2 control-label">Name</label>
                 <div class="col-sm-10 animated-form-control">
@@ -138,7 +138,9 @@
                   <input type="email" name="_replyto" class="form-control" id="email" required="required" />
                 </div>
               </div>
-                  <input type="text" id="phone_field" name="*honeypot" class="form-control" />
+                  <p class="hidden">
+                    <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                  </p>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Message</label>
                 <div class="col-sm-10 animated-form-control">
