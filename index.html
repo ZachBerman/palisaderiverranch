@@ -32,41 +32,7 @@
       <a href="index.html" class="logo-title"><img class="img-responsive center-block" src="images/logos/header-logo.png" alt="Logo" />
       <h3 class="logo-text">Palisade River Ranch</h3>
       </a>
-    </div>
-    <div class="navbar-wrapper">
-      <div class="container">
-        <nav class="navbar navbar-static-top">
-          <div class="navbar-header">
-            <a class="navbar-brand visible-xs" href="index.html"><img class="img-responsive" src="images/logos/logo-xs.png" alt="" />
-            </a>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-center navbar-nav">
-              <li>
-              <a href="about.html">About</a>
-              </li>
-              <li>
-                <a href="accomodations.html">Vacation Rentals</a>
-              </li>
-              <li>
-                <a href="events.html">Events</a>
-              </li>
-              <li>
-                <a href="gallery.html">Image Gallery</a>
-              </li>
-              <li>
-                <a href="contact.html">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+      <div class="divider"></div>
     </div>
   </header>
 
@@ -116,6 +82,109 @@
 
   </section>
 
+  <section id="insta">
+    <div class="container">
+    <div class="row">
+    <!-- SnapWidget -->
+      <script src="https://snapwidget.com/js/snapwidget.js"></script>
+      <iframe src="https://snapwidget.com/embed/982917" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>
+    <br><br>
+      <p class="social text-center">
+            <a href="https://www.facebook.com/PalisadeRiverRanch/" target="_blank"><i class="fa fa-facebook social-icon" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/palisaderiverranch/?hl=en" target="_blank"><i class="fa fa-instagram social-icon" aria-hidden="true"></i></a>
+          </p>
+    </div>
+  </div>
+  </section>
+
+  <section id="contact-map">
+
+    <div class="row map">
+      <div class="col-lg-10 col-lg-offset-1 col-md-12">
+        <div id="map"><!-- </div> -->
+          <script>
+            function initMap() {
+              var myLatLng = {lat: 39.097755 , lng: -108.380941};
+
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 8,
+                center: myLatLng,
+                styles: [{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"water","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#C6E2FF"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#C5E3BF"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#D1D1B8"}]}],
+                scrollwheel: false,
+              });
+
+              var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Hello World!'
+              });
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="container contact" style="margin-bottom: 41px !important;">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 col-md-12">
+        <div class="row">
+          <div class="col-sm-4">
+            <address>
+              <span><strong>Palisade River Ranch</strong></span><br>
+              <span>3627 Grand Valley Canal Road</span><br>
+              <span>Palisade, CO 81526</span>
+              <br>
+              <br>
+          <p><a href="mailto:palisaderiverranch@gmail.com">PalisadeRiverRanch@gmail.com</a><br>
+            </p>
+            <br>
+            </address>
+          <p class="social">
+            <a href="https://www.facebook.com/PalisadeRiverRanch/" target="_blank"><i class="fa fa-facebook social-icon" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/palisaderiverranch/?hl=en" target="_blank"><i class="fa fa-instagram social-icon" aria-hidden="true"></i></a>
+          </p>
+        </div>
+
+          <div class="col-sm-8">
+            <form name="contact_form" id="contact-form" class="form-horizontal" method="POST" data-netlify="true" action="/form-success" netlify-honeypot="bot-field">
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Name</label>
+                <div class="col-sm-10 animated-form-control">
+                  <input type="text" name="Name" class="text form-control" id="name" required="required" aria-required="true" />
+                </div>
+               </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">E-mail</label>
+                <div class="col-sm-10 animated-form-control">
+                  <input type="email" name="_replyto" class="form-control" id="email" required="required" />
+                </div>
+              </div>
+                  <p class="hidden">
+                    <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                  </p>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Message</label>
+                <div class="col-sm-10 animated-form-control">
+                  <textarea name="message" class="textarea form-control" id="message" required="required" rows="5" cols="20"></textarea>
+                  <div class="form-success alert alert-success" role="alert" style="display:none;"></div>
+                  <div class="form-failure alert alert-danger" role="alert" style="display:none;"></div>
+                </div>
+              </div>
+                <br/>
+                <div class="col-sm-12 col-md-12 ">
+                <br>
+                  <button type="submit" class="submit btn btn-default pull-right">SEND</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <div class="container">
   <footer class="page-footer">
 
@@ -133,16 +202,6 @@
       </div>
       <br>
       <div class="row">
-        <div class="text-center">
-          <p class="footer-links text-center">
-            <a href="index.html">Home&nbsp;&nbsp;|</a>
-            <a href="about.html">&nbsp;About&nbsp;&nbsp;|</a>
-            <a href="accomodations.html">&nbsp;Vacation Rentals&nbsp;&nbsp;|</a>
-            <a href="events.html">&nbsp;Events&nbsp;&nbsp;|</a>
-            <a href="gallery.html">&nbsp;Image Gallery&nbsp;&nbsp;|</a>
-            <a href="contact.html">&nbsp;Contact Us</a>
-          </p>
-        </div>
         <div>
           <p>© Palisade River Ranch <script type="text/javascript">document.write(new Date().getFullYear());</script> | Web Design &amp; Development by <a href="https://www.z-design.ca" target="_blank">ZDesign</a></p>
         </div>
@@ -156,6 +215,8 @@
   <script src="bootstrap/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js"></script>
   <script src="javascript/script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUtsdmRSX0cYGbbOGXZlMdFA7z4zw7Xok&callback=initMap"
+    async defer></script>
   <script>
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
