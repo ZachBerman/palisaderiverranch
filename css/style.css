@@ -77,11 +77,11 @@ a.logo-title {
 }
 
 a {
-  color: black;
+  color: grey;
 }
 a:focus,
 a:hover {
-  color: gray;
+  color: black;
   text-decoration: none;
 }
 h1,
@@ -299,10 +299,11 @@ blockquote footer {
 .divider {
   white-space: nowrap;
   font-size: 0;
-  height: 50px;
+  height: 25px;
   width: 100%;
-  margin: 30px 0 0;
+  margin: 0;
   position: relative;
+  margin-bottom:14px;
 }
 .divider:after,
 .divider:before {
@@ -343,6 +344,21 @@ section {
   font-size: 22px;
   transition: all 0.3s linear;
   margin: 0 2px;
+}
+.social-icon-large {
+  width: 65px;
+  height: 65px;
+  text-align: center;
+  line-height: 65px;
+  color: #ffffff;
+  border-radius: 50%;
+  background-color: #d0c4ac;
+  font-size: 28px;
+  transition: all 0.3s linear;
+  margin: 0 2px;
+}
+.social-icon-large:hover {
+  background: gray;
 }
 .social-icon:hover,
 .social-icon-small:hover {
@@ -1008,6 +1024,7 @@ p.area-p {
 .logo-text {
   margin-top: 5px;
   color: black;
+  margin-bottom: 0;
 }
 
 #events-content {
